@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'telegraf': ['Telegraf', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        'inter': ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,16 +51,39 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        gps: {
+          'dark-blue': "hsl(var(--gps-dark-blue))",
+          'neon-green': "hsl(var(--gps-neon-green))",
+          'white': "hsl(var(--gps-white))",
+          'off-white': "hsl(var(--gps-off-white))",
+          'light-grey': "hsl(var(--gps-light-grey))",
+          'middle-grey': "hsl(var(--gps-middle-grey))",
+          'dark-grey': "hsl(var(--gps-dark-grey))",
+          'red': "hsl(var(--gps-red))",
+          'orange': "hsl(var(--gps-orange))",
+          'blue': "hsl(var(--gps-blue))",
+          'purple': "hsl(var(--gps-purple))",
+          'yellow': "hsl(var(--gps-yellow))",
         },
+      },
+      spacing: {
+        'gps-1': 'var(--gps-grid-base)',
+        'gps-2': 'var(--gps-grid-2x)',
+        'gps-3': 'var(--gps-grid-3x)',
+        'gps-4': 'var(--gps-grid-4x)',
+        'gps-5': 'var(--gps-grid-5x)',
+        'gps-6': 'var(--gps-grid-6x)',
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gps-gradient-primary)',
+        'gradient-accent': 'var(--gps-gradient-accent)',
+      },
+      boxShadow: {
+        'gps-subtle': 'var(--gps-shadow-subtle)',
+        'gps-accent': 'var(--gps-shadow-accent)',
+      },
+      transitionProperty: {
+        'gps': 'var(--gps-transition-smooth)',
       },
       borderRadius: {
         lg: "var(--radius)",
