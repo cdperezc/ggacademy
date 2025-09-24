@@ -23,7 +23,7 @@ export function LearningHero() {
         {/* Search Bar */}
         <div className="max-w-2xl mx-auto mb-8">
           <div className="relative">
-            <Input type="search" placeholder="Search tutorials, guides, and resources..." className="h-14 pl-12 pr-4 text-lg bg-white/95 border-0 shadow-gps-accent placeholder:text-gps-middle-grey" />
+            
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gps-middle-grey w-5 h-5" />
           </div>
         </div>
