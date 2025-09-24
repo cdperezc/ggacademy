@@ -11,7 +11,8 @@ export function Header() {
           <div className="flex items-center gap-3">
             <img src={gpsgateLogo} alt="GpsGate" className="h-8" />
             
-            <span className="text-sm text-muted-foreground hidden md:block">Learning Center</span>
+            <span className="text-sm text-muted-foreground hidden md:block">
+          </span>
           </div>
 
           {/* Navigation */}
@@ -64,9 +65,7 @@ export function Header() {
               </NavigationMenuItem>
               
               <NavigationMenuItem>
-                <NavigationMenuLink className="group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50">
-                  Certification
-                </NavigationMenuLink>
+                
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
@@ -85,10 +84,7 @@ export function Header() {
             </Button>
 
             {/* Sign In */}
-            <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-              <User className="w-4 h-4 mr-2" />
-              Sign In
-            </Button>
+            
 
             {/* Mobile Menu */}
             <Button variant="ghost" size="icon" className="lg:hidden">

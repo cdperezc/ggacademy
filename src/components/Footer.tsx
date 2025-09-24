@@ -1,26 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import gpsgateLogo from "@/assets/gpsgate-logo.png";
-
 export function Footer() {
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-6 py-gps-4">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-gps-3">
           {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-4">
-              <img src={gpsgateLogo} alt="GpsGate" className="w-8 h-8" />
-              <span className="text-xl font-inter font-bold">GpsGate</span>
-            </div>
-            <p className="text-gps-off-white text-sm leading-relaxed mb-4">
-              Get to know your fleet better.
-            </p>
-            <p className="text-gps-off-white/80 text-xs leading-relaxed">
-              Be the trusted fleet management platform that puts users in control.
-            </p>
-          </div>
+          
 
           {/* Learning Resources */}
           <div>
@@ -53,11 +40,7 @@ export function Footer() {
               Get the latest tutorials and platform updates
             </p>
             <div className="space-y-3">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-gps-white/10 border-gps-white/20 text-white placeholder:text-gps-off-white/60"
-              />
+              <Input type="email" placeholder="Enter your email" className="bg-gps-white/10 border-gps-white/20 text-white placeholder:text-gps-off-white/60" />
               <Button variant="hero" size="sm" className="w-full">
                 Subscribe
               </Button>
@@ -67,9 +50,7 @@ export function Footer() {
 
         {/* Bottom Footer */}
         <div className="border-t border-gps-white/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-gps-off-white/80 text-sm">
-            © 2024 GpsGate. All rights reserved.
-          </div>
+          <div className="text-gps-off-white/80 text-sm">© 2025 GpsGate. All rights reserved.</div>
           <div className="flex gap-6 text-sm">
             <a href="#" className="text-gps-off-white hover:text-accent transition-colors">Privacy Policy</a>
             <a href="#" className="text-gps-off-white hover:text-accent transition-colors">Terms of Service</a>
@@ -77,6 +58,5 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }
