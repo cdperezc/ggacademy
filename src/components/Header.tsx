@@ -1,24 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { 
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
 import { Search, Menu, User } from "lucide-react";
 import gpsgateLogo from "@/assets/gpsgate-logo.png";
-
 export function Header() {
-  return (
-    <header className="bg-background border-b border-border sticky top-0 z-50 backdrop-blur-sm">
+  return <header className="bg-background border-b border-border sticky top-0 z-50 backdrop-blur-sm">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <img src={gpsgateLogo} alt="GpsGate" className="w-8 h-8" />
+            
             <span className="text-xl font-inter font-bold text-primary">GpsGate</span>
             <span className="text-sm text-muted-foreground hidden md:block">Learning Center</span>
           </div>
@@ -32,10 +23,7 @@ export function Header() {
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
-                        <a
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-primary p-6 no-underline outline-none focus:shadow-md"
-                          href="/"
-                        >
+                        <a className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-primary p-6 no-underline outline-none focus:shadow-md" href="/">
                           <div className="mb-2 mt-4 text-lg font-medium text-white">
                             Getting Started
                           </div>
@@ -87,11 +75,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             {/* Desktop Search */}
             <div className="hidden md:block relative">
-              <Input
-                type="search"
-                placeholder="Search..."
-                className="w-64 pl-8"
-              />
+              <Input type="search" placeholder="Search..." className="w-64 pl-8" />
               <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
             </div>
 
@@ -113,6 +97,5 @@ export function Header() {
           </div>
         </div>
       </div>
-    </header>
-  );
+    </header>;
 }
