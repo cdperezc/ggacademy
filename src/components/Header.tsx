@@ -9,7 +9,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            
+            <img src={gpsgateLogo} alt="GpsGate" className="h-8" />
             <span className="text-xl font-inter font-bold text-primary">GpsGate</span>
             <span className="text-sm text-muted-foreground hidden md:block">Learning Center</span>
           </div>
