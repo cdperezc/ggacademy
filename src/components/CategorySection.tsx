@@ -19,7 +19,8 @@ const categories = [
     icon: BookOpen,
     color: "bg-gps-blue",
     courses: 8,
-    level: "Beginner"
+    level: "Beginner",
+    url: "https://vtcontent.gpsgateservices.com/en-us/academy/1.0-introduction-to-gpsgate"
   },
   {
     id: "signal-processing",
@@ -28,7 +29,8 @@ const categories = [
     icon: Code,
     color: "bg-gps-purple",
     courses: 12,
-    level: "Intermediate"
+    level: "Intermediate",
+    url: "https://vtcontent.gpsgateservices.com/en-us/academy/3.0-introduction-to-gpsgate"
   },
   {
     id: "administration",
@@ -37,7 +39,8 @@ const categories = [
     icon: Users,
     color: "bg-gps-orange",
     courses: 6,
-    level: "Intermediate"
+    level: "Intermediate",
+    url: "https://vtcontent.gpsgateservices.com/en-us/academy/2.0-introduction-to-gpsgate"
   },
   {
     id: "integration",
@@ -46,7 +49,8 @@ const categories = [
     icon: Settings,
     color: "bg-gps-yellow",
     courses: 15,
-    level: "Advanced"
+    level: "Advanced",
+    url: "https://support.gpsgate.com/hc/en-us/categories/360000321413-Developer"
   },
   {
     id: "security",
@@ -55,7 +59,8 @@ const categories = [
     icon: Shield,
     color: "bg-gps-red",
     courses: 4,
-    level: "Advanced"
+    level: "Advanced",
+    url: "https://support.gpsgate.com/hc/en-us/sections/360003331359-Security"
   },
   {
     id: "video-tutorials",
@@ -64,7 +69,8 @@ const categories = [
     icon: Video,
     color: "bg-gps-neon-green",
     courses: 25,
-    level: "All Levels"
+    level: "All Levels",
+    url: "https://www.youtube.com/@GpsGate"
   }
 ];
 
@@ -85,10 +91,16 @@ export function CategorySection() {
           {categories.map((category) => {
             const IconComponent = category.icon;
             return (
-              <Card 
-                key={category.id} 
-                className="group hover:shadow-gps-subtle transition-all duration-300 cursor-pointer border-border hover:border-accent/50"
+              <a 
+                href={category.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block"
               >
+                <Card 
+                  key={category.id} 
+                  className="group hover:shadow-gps-subtle transition-all duration-300 cursor-pointer border-border hover:border-accent/50"
+                >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg ${category.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
@@ -114,7 +126,8 @@ export function CategorySection() {
                     <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </CardContent>
-              </Card>
+                </Card>
+              </a>
             );
           })}
         </div>
