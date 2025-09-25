@@ -17,7 +17,7 @@ export function Footer() {
               <li><a href="#" className="text-gps-off-white hover:text-accent transition-colors">Signal Processing</a></li>
               <li><a href="#" className="text-gps-off-white hover:text-accent transition-colors">Team Administration</a></li>
               <li><a href="#" className="text-gps-off-white hover:text-accent transition-colors">Video Tutorials</a></li>
-              <li><a href="#" className="text-gps-off-white hover:text-accent transition-colors">Certification</a></li>
+              <li><a href="#" className="text-gps-off-white hover:text-accent transition-colors">Certificación</a></li>
             </ul>
           </div>
 
