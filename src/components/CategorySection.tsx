@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 import { 
   BookOpen, 
   Video, 
@@ -75,6 +76,12 @@ const categories = [
 ];
 
 export function CategorySection() {
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (category: typeof categories[0]) => {
+    navigate(`/learning?url=${encodeURIComponent(category.url)}&title=${encodeURIComponent(category.title)}`);
+  };
+
   return (
     <section className="py-gps-5 bg-background">
       <div className="container mx-auto px-6">
@@ -91,16 +98,11 @@ export function CategorySection() {
           {categories.map((category) => {
             const IconComponent = category.icon;
             return (
-              <a 
-                href={category.url} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block"
+              <Card 
+                key={category.id} 
+                className="group hover:shadow-gps-subtle transition-all duration-300 cursor-pointer border-border hover:border-accent/50"
+                onClick={() => handleCategoryClick(category)}
               >
-                <Card 
-                  key={category.id} 
-                  className="group hover:shadow-gps-subtle transition-all duration-300 cursor-pointer border-border hover:border-accent/50"
-                >
                 <CardContent className="p-6">
                   <div className="flex items-start justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg ${category.color} flex items-center justify-center group-hover:scale-105 transition-transform duration-300`}>
@@ -126,8 +128,7 @@ export function CategorySection() {
                     <ArrowRight className="w-4 h-4 text-accent group-hover:translate-x-1 transition-transform duration-300" />
                   </div>
                 </CardContent>
-                </Card>
-              </a>
+              </Card>
             );
           })}
         </div>
