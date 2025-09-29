@@ -16,7 +16,7 @@ export function Header() {
           </div>
 
           {/* Navigation */}
-          <NavigationMenu className="hidden lg:flex ml-auto">
+          <NavigationMenu className="hidden lg:flex">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-foreground">Courses</NavigationMenuTrigger>
