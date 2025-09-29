@@ -1,7 +1,6 @@
 import { Header } from "@/components/Header";
 import { LearningHero } from "@/components/LearningHero";
 import { CategorySection } from "@/components/CategorySection";
-import { TutorialGrid } from "@/components/TutorialGrid";
 import { VideoSection } from "@/components/VideoSection";
 import { Footer } from "@/components/Footer";
 
@@ -12,8 +11,7 @@ const Index = () => {
       <main>
         <LearningHero />
         <CategorySection />
-        {/* <TutorialGrid /> */}
-        {/*  <VideoSection /> */}
+        <VideoSection />
       </main>
       <Footer />
     </div>

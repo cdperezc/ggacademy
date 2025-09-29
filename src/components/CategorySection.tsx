@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { 
   BookOpen, 
   Video, 
@@ -76,10 +76,10 @@ const categories = [
 ];
 
 export function CategorySection() {
-  const navigate = useNavigate();
+  const [selectedUrl, setSelectedUrl] = useState<string | null>(null);
 
   const handleCategoryClick = (category: typeof categories[0]) => {
-    navigate(`/learning?url=${encodeURIComponent(category.url)}&title=${encodeURIComponent(category.title)}`);
+    setSelectedUrl(category.url);
   };
 
   return (
@@ -132,6 +132,17 @@ export function CategorySection() {
             );
           })}
         </div>
+        
+        {selectedUrl && (
+          <div className="mt-8 rounded-lg overflow-hidden border border-border">
+            <iframe
+              src={selectedUrl}
+              className="w-full h-[800px]"
+              style={{ border: 'none' }}
+              title="Learning Content"
+            />
+          </div>
+        )}
       </div>
     </section>
   );

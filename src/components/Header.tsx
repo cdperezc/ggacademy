@@ -16,7 +16,7 @@ export function Header() {
           </div>
 
           {/* Navigation */}
-          <NavigationMenu className="hidden lg:flex">
+          <NavigationMenu className="hidden lg:flex ml-auto">
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuTrigger className="text-foreground">Courses</NavigationMenuTrigger>
@@ -72,12 +72,6 @@ export function Header() {
 
           {/* Search & Actions */}
           <div className="flex items-center gap-4">
-            {/* Desktop Search */}
-            <div className="hidden md:block relative">
-              <Input type="search" placeholder="Search..." className="w-64 pl-8" />
-              <Search className="absolute left-2.5 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            </div>
-
             {/* Mobile Search */}
             <Button variant="ghost" size="icon" className="md:hidden">
               <Search className="w-4 h-4" />
